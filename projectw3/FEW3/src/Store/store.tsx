@@ -1,10 +1,11 @@
 // src/app/store.ts
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "../Data/counterSlice";
-
+import creatAcc from "../Data/createAccount";
 const store = configureStore({
   reducer: {
     counter: counterReducer,
+    listUser: creatAcc,
   },
 });
 

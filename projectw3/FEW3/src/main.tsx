@@ -6,13 +6,17 @@ import "./index.css";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./Store/store";
+import Test from "./page/Test.tsx";
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <Router>
-      <Provider store={store}>
+    <Provider store={store}>
+      <Router>
         <App />
-      </Provider>
-      <Routes></Routes>
-    </Router>
+        <Routes>
+          <Route path="/test" element={<Test />}></Route>
+        </Routes>
+      </Router>
+    </Provider>
   </React.StrictMode>
 );
