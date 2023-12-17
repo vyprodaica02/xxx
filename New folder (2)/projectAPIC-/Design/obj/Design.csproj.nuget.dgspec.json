@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Duc\\Desktop\\New folder (2)\\projectAPIC-\\Design\\Design.csproj": {}
+    "C:\\Users\\Duc\\Desktop\\xxx\\New folder (2)\\projectAPIC-\\Design\\Design.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Duc\\Desktop\\New folder (2)\\projectAPIC-\\Design\\Design.csproj": {
+    "C:\\Users\\Duc\\Desktop\\xxx\\New folder (2)\\projectAPIC-\\Design\\Design.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Duc\\Desktop\\New folder (2)\\projectAPIC-\\Design\\Design.csproj",
+        "projectUniqueName": "C:\\Users\\Duc\\Desktop\\xxx\\New folder (2)\\projectAPIC-\\Design\\Design.csproj",
         "projectName": "Design",
-        "projectPath": "C:\\Users\\Duc\\Desktop\\New folder (2)\\projectAPIC-\\Design\\Design.csproj",
+        "projectPath": "C:\\Users\\Duc\\Desktop\\xxx\\New folder (2)\\projectAPIC-\\Design\\Design.csproj",
         "packagesPath": "C:\\Users\\Duc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Duc\\Desktop\\New folder (2)\\projectAPIC-\\Design\\obj\\",
+        "outputPath": "C:\\Users\\Duc\\Desktop\\xxx\\New folder (2)\\projectAPIC-\\Design\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",

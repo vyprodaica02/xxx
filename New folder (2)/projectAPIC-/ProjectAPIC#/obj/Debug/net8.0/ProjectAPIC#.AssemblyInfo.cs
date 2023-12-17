@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjectAPIC#")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9540e3ba3c13beaa10f0f1ae96563a57a9e15f7e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectAPIC#")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectAPIC#")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

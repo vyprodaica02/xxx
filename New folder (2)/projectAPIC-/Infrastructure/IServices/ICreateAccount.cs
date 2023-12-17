@@ -1,5 +1,6 @@
 ﻿using Design.Entity;
 using Infrastructure.ErrorHelper;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace Infrastructure.IServices
 {
     public interface  ICreateAccount
     {
-        public Task<ErrorHel> CreateAcc(List<ListAcc> listAccs);
-
+        public Task<ErrorHel> CreateAc(ListAcc listAccs);
+        public List<ListAcc> getDataAll();
     }
 }

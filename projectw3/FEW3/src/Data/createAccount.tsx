@@ -1,6 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+// Trong file createAccount.ts
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { Wallet } from "ethers";
+import axios from "axios";
 
 interface Account {
   address: string;
@@ -16,42 +17,51 @@ const initialState: UserState = {
   lstAcc: [],
 };
 
-const handleCreateAccounts = (numAccounts: number) => {
-  try {
-    const accounts: Account[] = [];
-    for (let i = 0; i < numAccounts; i++) {
-      const wallet = Wallet.createRandom();
-      const address = wallet.address;
-      const privateKey = wallet.privateKey;
+export const createAccount = createAsyncThunk(
+  "listUser/createAccount",
+  async (_, thunkAPI) => {
+    const wallet = Wallet.createRandom();
+    const address = wallet.address;
+    const privateKey = wallet.privateKey;
 
-      let mnemonic: string | null = null;
-      if (wallet.mnemonic) {
-        mnemonic = wallet.mnemonic.phrase;
-      }
-
-      accounts.push({
-        address,
-        privateKey,
-        mnemonic: mnemonic || "",
-      });
+    let mnemonic: string | null = null;
+    if (wallet.mnemonic) {
+      mnemonic = wallet.mnemonic.phrase;
     }
-    return accounts;
-  } catch (error) {
-    console.error("Lỗi khi tạo tài khoản mới:", error);
-    return [];
+
+    const newAccount = {
+      address,
+      privateKey,
+      mnemonic: mnemonic || "",
+    };
+
+    try {
+      // Gọi API để lưu tài khoản mới
+      const response = await axios.post(
+        "https://localhost:7083/api/CreateListAccount/CreateLis",
+        newAccount
+      );
+
+      // Thành công: trả về dữ liệu để cập nhật store
+      return response.data;
+    } catch (error) {
+      // Xử lý lỗi nếu cần thiết
+      console.error("Error creating account:", error);
+      // Thất bại: trả về lỗi để xử lý
+      return thunkAPI.rejectWithValue("Error creating account");
+    }
   }
-};
+);
 
 const userSlice = createSlice({
   name: "listUser",
   initialState,
-  reducers: {
-    createlstAcc: (state, action: PayloadAction<number>) => {
-      const accounts = handleCreateAccounts(action.payload);
-      state.lstAcc.push(...accounts);
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(createAccount.fulfilled, (state, action) => {
+      state.lstAcc.push(action.payload);
+    });
   },
 });
 
-export const { createlstAcc } = userSlice.actions;
 export default userSlice.reducer;

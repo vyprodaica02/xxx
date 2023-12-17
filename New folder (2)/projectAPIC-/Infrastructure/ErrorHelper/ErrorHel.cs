@@ -9,6 +9,7 @@ namespace Infrastructure.ErrorHelper
     public enum ErrorHel
     {
         thanhCong,
-        thatBai
+        thatBai,
+            dulieutrong
     }
 }

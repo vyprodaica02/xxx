@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Duc\\Desktop\\New folder (2)\\projectAPIC-\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Users\\Duc\\Desktop\\xxx\\New folder (2)\\projectAPIC-\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Duc\\Desktop\\New folder (2)\\projectAPIC-\\Design\\Design.csproj": {
+    "C:\\Users\\Duc\\Desktop\\xxx\\New folder (2)\\projectAPIC-\\Design\\Design.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Duc\\Desktop\\New folder (2)\\projectAPIC-\\Design\\Design.csproj",
+        "projectUniqueName": "C:\\Users\\Duc\\Desktop\\xxx\\New folder (2)\\projectAPIC-\\Design\\Design.csproj",
         "projectName": "Design",
-        "projectPath": "C:\\Users\\Duc\\Desktop\\New folder (2)\\projectAPIC-\\Design\\Design.csproj",
+        "projectPath": "C:\\Users\\Duc\\Desktop\\xxx\\New folder (2)\\projectAPIC-\\Design\\Design.csproj",
         "packagesPath": "C:\\Users\\Duc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Duc\\Desktop\\New folder (2)\\projectAPIC-\\Design\\obj\\",
+        "outputPath": "C:\\Users\\Duc\\Desktop\\xxx\\New folder (2)\\projectAPIC-\\Design\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
@@ -88,14 +88,14 @@
         }
       }
     },
-    "C:\\Users\\Duc\\Desktop\\New folder (2)\\projectAPIC-\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Duc\\Desktop\\xxx\\New folder (2)\\projectAPIC-\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Duc\\Desktop\\New folder (2)\\projectAPIC-\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Duc\\Desktop\\xxx\\New folder (2)\\projectAPIC-\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\Duc\\Desktop\\New folder (2)\\projectAPIC-\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Duc\\Desktop\\xxx\\New folder (2)\\projectAPIC-\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Duc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Duc\\Desktop\\New folder (2)\\projectAPIC-\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Duc\\Desktop\\xxx\\New folder (2)\\projectAPIC-\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
@@ -119,8 +119,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Duc\\Desktop\\New folder (2)\\projectAPIC-\\Design\\Design.csproj": {
-                "projectPath": "C:\\Users\\Duc\\Desktop\\New folder (2)\\projectAPIC-\\Design\\Design.csproj"
+              "C:\\Users\\Duc\\Desktop\\xxx\\New folder (2)\\projectAPIC-\\Design\\Design.csproj": {
+                "projectPath": "C:\\Users\\Duc\\Desktop\\xxx\\New folder (2)\\projectAPIC-\\Design\\Design.csproj"
               }
             }
           }
@@ -135,6 +135,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.14, )"
@@ -146,6 +150,12 @@
               "version": "[7.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.14, )"
             }

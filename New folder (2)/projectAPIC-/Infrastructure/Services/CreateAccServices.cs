@@ -2,7 +2,9 @@
 using Infrastructure.DataX;
 using Infrastructure.ErrorHelper;
 using Infrastructure.IServices;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,26 +20,25 @@ namespace Infrastructure.Services
         {
             dbcontext = new AppDbContext();
         }
-        public async Task<ErrorHel> CreateAcc(List<ListAcc> listAccs)
-        {
-            using (var trans = dbcontext.Database.BeginTransaction())
-            {
-                try
-                {
-                    foreach (var acc in listAccs)
-                    {
-                        dbcontext.listAccs.Add(acc);
-                    }
-                    await dbcontext.SaveChangesAsync();
-                    await trans.CommitAsync();
-                    return ErrorHel.thanhCong ;
-                }
-                catch
-                {
-                    await trans.RollbackAsync();
-                    return ErrorHel.thatBai;
 
-                }
+        public async Task<ErrorHel> CreateAc(ListAcc listAccs)
+        {
+            dbcontext.listAccs.Add(listAccs);
+            await dbcontext.SaveChangesAsync();
+            return ErrorHel.thanhCong;
+        }
+
+        public List<ListAcc> getDataAll()
+        {
+            var data = dbcontext.listAccs;
+            
+            if(data == null)
+            {
+                return null;
+            }
+            else
+            {
+                 return data.ToList();
             }
         }
     }

@@ -1,19 +1,16 @@
-// src/App.tsx
-import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement } from "./Data/counterSlice";
-import { RootState } from "./Store/store";
-
-function App() {
-  const count = useSelector((state: RootState) => state.counter.value);
-  const dispatch = useDispatch();
-
+const App = () => {
   return (
-    <div>
-      <h1>Counter: {count}</h1>
-      <button onClick={() => dispatch(increment())}>Increment</button>
-      <button onClick={() => dispatch(decrement())}>Decrement</button>
+    <div className="flex items-center justify-between p-4 h-16 bg-blue-500 border rounded-md">
+      <div>
+        <span>avata</span>
+      </div>
+      <div>
+        <ul className="flex gap-2">
+          <li></li>
+        </ul>
+      </div>
     </div>
   );
-}
+};
 
 export default App;

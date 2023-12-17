@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fyRuRj4moDpoFxVjKFSHojbxRsquKrIECDnF8EAzODQxxhTqO+7e4AyxKh0wydMpHXUhGJnfJ7hilANE01zGSQ==",
+  "dgSpecHash": "W33sY5kkC0KzkIFFglzvKMP2IYJxTYm/OuBKAhsj59Kkg2deuxX/kFaNEgyVvN0AT0Ong8LRXAyuYSNZKggLKQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Duc\\Desktop\\New folder (2)\\projectAPIC-\\Design\\Design.csproj",
+  "projectFilePath": "C:\\Users\\Duc\\Desktop\\xxx\\New folder (2)\\projectAPIC-\\Design\\Design.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Duc\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Duc\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

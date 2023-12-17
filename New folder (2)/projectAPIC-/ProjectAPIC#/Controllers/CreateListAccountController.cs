@@ -17,21 +17,18 @@ namespace ProjectAPIC_.Controllers
             icr = new CreateAccServices();
         }
 
-        [HttpPost("CreateList")]
-        public async Task<IActionResult> CreateListAccounts(List<ListAcc> listAccs)
+       
+        [HttpPost("CreateLis")]
+
+        public async Task<IActionResult> CreateListAccount(ListAcc listAccs)
         {
-            var res = await icr.CreateAcc(listAccs);
-            if(res == ErrorHel.thanhCong)
-            {
+            var res = await icr.CreateAc(listAccs);
                 return Ok("ThanhCong");
-            }else if(res == ErrorHel.thatBai)
-            {
-                return BadRequest("thatBai");
-            }
-            else
-            {
-                return BadRequest("thatBai");
-            }
+        }
+        [HttpGet("getdata")]
+        public IActionResult GetAccount() {
+            var res = icr.getDataAll();
+            return Ok(res);
         }
     }
 }
