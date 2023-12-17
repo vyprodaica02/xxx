@@ -6,7 +6,7 @@ import "./index.css";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./Store/store";
-import Test from "./page/Test.tsx";
+import CreateAcc from "./page/CreateAcc.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <Router>
         <App />
         <Routes>
-          <Route path="/test" element={<Test />}></Route>
+          <Route path="/" element={<CreateAcc />}></Route>
         </Routes>
       </Router>
     </Provider>

@@ -1,11 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-// Trong file YourComponent.tsx
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createAccount } from "../Data/createAccount";
 import * as XLSX from "xlsx";
-const YourComponent = () => {
+const App = () => {
   const dispatch = useDispatch();
 
   const handleCreateAccount = async () => {
@@ -54,11 +53,11 @@ const YourComponent = () => {
   };
 
   return (
-    <div>
-      <div>
+    <div className="">
+      <div className="flex justify-center mt-4 items-center gap-3">
         <label>
           <input
-            className="mb-4 p-3 border border-purple-500"
+            className="p-3 border border-purple-500"
             type="number"
             value={numAccounts}
             onChange={handleInputChange}
@@ -78,4 +77,4 @@ const YourComponent = () => {
   );
 };
 
-export default YourComponent;
+export default App;
