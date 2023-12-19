@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createAccount } from "../Data/createAccount";
 import * as XLSX from "xlsx";
+import ConnetMetamask from "./ConnetMetamask";
 const App = () => {
   const dispatch = useDispatch();
 
@@ -72,6 +73,7 @@ const App = () => {
         >
           Export
         </button>
+        <ConnetMetamask></ConnetMetamask>
       </div>
     </div>
   );
